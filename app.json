@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "Escape Honey Traps",
+    "slug": "escape-honey-traps",
+    "version": "1.1.0",
+    "orientation": "portrait",
+    "scheme": "escapehoneytraps",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "android": {
+      "package": "com.escapehoneytraps.app",
+      "versionCode": 3,
+      "blockedPermissions": [
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#103430",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "./plugins/withAndroidIntents",
+      "./plugins/withUploadSigning",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#1C5E59"
+        }
+      ],
+      "@react-native-community/datetimepicker",
+      "expo-router",
+      "expo-status-bar",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F3EFE6",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "dark": {
+            "backgroundColor": "#10151B",
+            "image": "./assets/splash-icon-dark.png",
+            "imageWidth": 160
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "privacyPolicy": "privacy-policy.html"
+    }
+  }
+}
